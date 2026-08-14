@@ -2,7 +2,7 @@
 
 A responsive web application for searching movies and creating a personal watchlist.
 
-**[Live Demo](https://lisanik.github.io/movie-watchlist/)** · **[Repository](#)**
+**[Live Demo](https://lisanik.github.io/movie-watchlist/)** · **[Repository](https://github.com/LisaNik/movie-watchlist)**
 
 ## About
 
