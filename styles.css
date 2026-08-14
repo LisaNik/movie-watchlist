@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.background{
+    width: 100%;
+    opacity: 20%;
+    height: 208px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    font-family: "Inter", sans-serif;
+    color: #FFFFFF;
+
+}
+
+header{
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+        ),url(https://images.unsplash.com/photo-1628432136678-43ff9be34064?q=80&w=663&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    width: 100%;
+    height: 208px;    
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    padding: 82px 42px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+.header-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 56px;
+    justify-content: space-between;
+}
+
+header h1{
+    font-size: 42.79px;
+    font-weight: 800;
+    letter-spacing: -2%;
+    margin: 0;
+}
+
+.site-link{
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+
+
+.movie-search{
+    display: flex;
+    background-color: #2E2E2F;
+    align-items: center;
+    justify-content: space-between;
+    width: 462px;
+    border-radius: 10px;
+}
+
+.movie-input{
+    padding: 9px 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-input{
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+    outline: none;
+}
+
+.search-btn{
+    background-color: #4B4B4B;
+    color: white;
+    border: none;
+    padding: 12px 36px;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+.search-input, .search-icon{
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    /* min-height: calc(100vh - 208px);
+    text-align: center; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 36px 44px;
+    /* min-height: calc(100vh - 208px); высота экрана минус header */
+
+}
+.placeholder-text{
+    font-size: 18px;
+    color: #2E2E2F;
+    font-weight: bold;
+    padding: 0;
+    margin-top: 9px;
+}
+
+.item{
+    display: flex;
+    gap: 21px;
+    border-bottom: 1.5px #2C2C2C solid;
+    padding: 25px 0px;
+    max-width: 600px;
+
+}
+.top-info, .middle-info, .bottom-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+
+.top-info{
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.middle-info{
+    gap: 18px;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.poster{
+    width: 100px;
+    height: 150px;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+}
+
+.rating-number,
+.screen-time,
+.genre,
+.add-to-watchlist-btn {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1;
+}
+
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    color: #A5A5A5;
+    line-height: 20px;
+    margin: 0;
+
+}
+
+.add-to-watchlist{
+    display: flex;
+    align-items: center;
+    
+    gap: 5px;
+}
+.add-to-watchlist-btn,
+.remove-from-watchlist-btn{
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+}
+
+.no-results p{
+    font-weight: bold;
+    color: #787878;
+    font-size: 18px;
+}
+
+.empty-list,
+.placeholder, 
+.no-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    max-width: 350px;
+    min-height: calc(100vh - 300px); 
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.read-more{
+    color: #FFFFFF;
+}
+
+#list {
+    display: grid;
+    gap: 20px 100px;
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+#list:has(.item:only-child) .item {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+    /* WATCHLIST HTML */
+
+.add-movies{
+    display: flex;
+    gap: 7px;
+    
+}
+
+@media (min-width: 1300px) {
+    #list {
+    padding: 0px 100px;
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
